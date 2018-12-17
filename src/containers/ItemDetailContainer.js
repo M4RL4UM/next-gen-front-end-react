@@ -10,7 +10,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import { shuffleArray } from '../services/helpers';
 import ParentCollections from '../components/ItemDetail/ParentCollections';
 import LargeFeature from '../components/ItemDetail/LargeFeature';
-import OpenSeadragonContainer from './OpenSeadragonContainer';
+import UniversalViewerContainer from './UniversalViewerContainer';
 
 export class ItemDetailContainer extends Component {
   constructor(props) {
@@ -198,7 +198,9 @@ export class ItemDetailContainer extends Component {
 
     return (
       <div className="landing-page">
-        {item && idInSync && loggedIn && <OpenSeadragonContainer item={item} />}
+        {item &&
+          idInSync &&
+          loggedIn && <UniversalViewerContainer item={item} />}
         <div id="page">
           <main id="main-content" className="content" tabIndex="0">
             {renderDisplay()}
